@@ -1,0 +1,222 @@
+/* ================================
+   kuliner.css
+   Tambahan CSS khusus halaman kuliner
+   Numpang di atas style.css
+================================ */
+
+/* HERO KULINER — lebih pendek dari page-hero standar */
+.kuliner-hero {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
+}
+.kuliner-hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+.kuliner-hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+.kuliner-hero-content p { font-size: 14px; opacity: 0.8; margin: 0 0 8px; letter-spacing: 2px; text-transform: uppercase; }
+.kuliner-hero-content h1 { font-size: 52px; margin: 0 0 10px; font-weight: 900; line-height: 1.1; }
+.kuliner-hero-content .tag-kuliner {
+    display: inline-block;
+    background: #8b0000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 14px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+/* STATS KULINER */
+.kuliner-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 0;
+    flex-wrap: wrap;
+}
+.kuliner-stat {
+    text-align: center;
+}
+.kuliner-stat .angka {
+    font-size: 32px;
+    font-weight: 900;
+    color: #8b0000;
+    line-height: 1;
+    display: block;
+}
+.kuliner-stat .keterangan {
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+    display: block;
+}
+
+/* BAHAN & RESEP */
+.kuliner-detail-grid {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+.kuliner-foto {
+    flex: 1;
+    position: relative;
+}
+.kuliner-foto img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+.kuliner-foto .badge-harga {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background: #8b0000;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.kuliner-info { flex: 1; }
+.kuliner-info h3 { text-align: left; }
+.kuliner-info h3::after { margin: 16px 0; }
+.kuliner-info p { color: #555; line-height: 26px; margin-bottom: 14px; }
+
+/* BAHAN LIST */
+.bahan-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.bahan-list li {
+    background: #f0e0e0;
+    color: #8b0000;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* CARA BUAT */
+.cara-buat {
+    counter-reset: langkah;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.cara-buat li {
+    counter-increment: langkah;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: #444;
+    line-height: 22px;
+}
+.cara-buat li::before {
+    content: counter(langkah);
+    background: #8b0000;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* TEMPAT MAKAN */
+.tempat-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tempat-card {
+    width: calc(33% - 16px);
+    background: #fff;
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 2px 14px rgba(0,0,0,0.08);
+    border-left: 4px solid #8b0000;
+}
+.tempat-card h6 {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 6px;
+    color: #222;
+}
+.tempat-card p {
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 4px;
+    line-height: 20px;
+}
+.tempat-card .harga {
+    font-weight: bold;
+    color: #8b0000;
+    font-size: 13px;
+}
+
+/* KULINER LAIN */
+.kuliner-lain-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.kuliner-lain-item {
+    width: calc(25% - 16px);
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s;
+}
+.kuliner-lain-item:hover { transform: translateY(-4px); }
+.kuliner-lain-item img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.kuliner-lain-item span {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .kuliner-hero-content h1 { font-size: 34px; }
+    .kuliner-detail-grid { flex-direction: column; }
+    .tempat-card { width: 100%; }
+    .kuliner-lain-item { width: calc(50% - 12px); }
+    .kuliner-stats { gap: 20px; }
+}
