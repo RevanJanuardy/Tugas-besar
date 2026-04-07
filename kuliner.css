@@ -1,10 +1,4 @@
-/* ================================
-   kuliner.css
-   Tambahan CSS khusus halaman kuliner
-   Numpang di atas style.css
-================================ */
 
-/* HERO KULINER — lebih pendek dari page-hero standar */
 .kuliner-hero {
     position: relative;
     height: 320px;
@@ -43,7 +37,7 @@
     letter-spacing: 1px;
 }
 
-/* STATS KULINER */
+/
 .kuliner-stats {
     display: flex;
     justify-content: center;
@@ -70,7 +64,7 @@
     display: block;
 }
 
-/* BAHAN & RESEP */
+
 .kuliner-detail-grid {
     display: flex;
     gap: 40px;
@@ -101,7 +95,7 @@
 .kuliner-info h3::after { margin: 16px 0; }
 .kuliner-info p { color: #555; line-height: 26px; margin-bottom: 14px; }
 
-/* BAHAN LIST */
+
 .bahan-list {
     list-style: none;
     padding: 0;
@@ -119,7 +113,7 @@
     border-radius: 20px;
 }
 
-/* CARA BUAT */
+
 .cara-buat {
     counter-reset: langkah;
     list-style: none;
@@ -152,7 +146,7 @@
     margin-top: 1px;
 }
 
-/* TEMPAT MAKAN */
+
 .tempat-grid {
     display: flex;
     gap: 20px;
@@ -185,7 +179,7 @@
     font-size: 13px;
 }
 
-/* KULINER LAIN */
+
 .kuliner-lain-grid {
     display: flex;
     gap: 20px;
